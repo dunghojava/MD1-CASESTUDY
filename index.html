@@ -1,0 +1,34 @@
+<html>
+<head>
+    <title>Snake Game</title>
+    <style>
+        canvas {
+            display: block;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: #666666;
+            font-family: Comic Sans MS;
+        }
+
+        #gameover {
+            position: absolute;
+            left: 475px;
+            display: none;
+        }
+    </style>
+
+</head>
+<body>
+    <label>
+        <h1>
+            <strong id="score"></strong>
+        </h1>
+    </label>
+    <img id="gameover" src="gameover/gameover.png">
+    <canvas id="myCanvas" width="608" height="608"></canvas>
+<script src="snake.js"></script>
+</body>
+</html>
