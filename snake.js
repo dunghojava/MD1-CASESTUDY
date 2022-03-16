@@ -151,7 +151,7 @@ function GameOver() {
     document.getElementById('gameover').style.display = 'block';
 }
 
-let game = setInterval(draw, 75);
+let game = setInterval(draw, 150);
 
 
 
