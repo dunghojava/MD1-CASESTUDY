@@ -66,18 +66,6 @@ function direction(event) {
     }
 }
 
-// check collision function
-function collision(head, array) {
-    for (let i = 0; i < array.length; i++) {
-        if (head.x == array[i].x && head.y == array[i].y) {
-            return true;
-        }
-    }
-    return false;
-}
-
-// draw everything to the canvas
-
 function draw() {
 
     ctx.drawImage(ground, 0, 0);
@@ -136,6 +124,16 @@ function draw() {
         y: snakeY
     }
 
+    // check collision function
+    function collision(head, array) {
+        for (let i = 0; i < array.length; i++) {
+            if (head.x == array[i].x && head.y == array[i].y) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     // game over
 
     if (snakeX < box || snakeX > 17 * box || snakeY < 3 * box || snakeY > 17 * box || collision(newHead, snake)) {
@@ -153,7 +151,7 @@ function GameOver() {
     document.getElementById('gameover').style.display = 'block';
 }
 
-let game = setInterval(draw, 100);
+let game = setInterval(draw, 150);
 
 
 
